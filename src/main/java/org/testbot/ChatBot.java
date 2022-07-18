@@ -43,10 +43,6 @@ public class ChatBot {
             return "Привіт, я - " + botName;
         }
 
-        if (isLulMessage(message)) {
-            return "Ты бомж, тебе ничего не светит";
-        }
-
         int professionSalary = find(message, professions);
         int dreamCost = find(message, dreams);
 
@@ -100,15 +96,5 @@ public class ChatBot {
         String helloWord3 = "ку";
 
         return message.contains(helloWord1) || message.contains(helloWord2) || message.contains(helloWord3);
-    }
-    private static boolean isLulMessage(String LulMessage) {
-        LulMessage = LulMessage.toLowerCase();
-
-        String name = "рус";
-        String name2 = "игорь";
-        String name3 = "паша";
-        String name4 = "рости";
-
-        return LulMessage.contains(name) || LulMessage.contains(name2) || LulMessage.contains(name3) || LulMessage.contains(name4);
     }
 }
